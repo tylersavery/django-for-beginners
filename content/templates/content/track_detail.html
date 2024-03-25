@@ -1,0 +1,20 @@
+{% extends "content/base_template.html" %}
+
+{% block content %}
+
+{% if track %}
+
+<h1>{{track.title}}</h1>
+
+<p>{{track.lyrics}}</p>
+
+
+<a href="{% url 'track_edit' track_uuid=track.uuid %}" class="btn btn-secondary">Edit</a>
+
+{% else %}
+
+Track not found!
+
+{% endif %}
+
+{% endblock %}

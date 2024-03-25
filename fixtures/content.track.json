@@ -1,0 +1,20 @@
+[
+{
+    "model": "content.track",
+    "pk": 1,
+    "fields": {
+        "uuid": "f8e90049-d3de-4797-815f-4dfe61a89adf",
+        "created_at": "2024-03-25T18:30:40.556Z",
+        "updated_at": "2024-03-25T18:44:27.191Z",
+        "title": "Test Track",
+        "album": 1,
+        "duration_seconds": 30,
+        "lyrics": "Test 123",
+        "is_published": true,
+        "instrument_type": "mixed",
+        "tags": [
+            1
+        ]
+    }
+}
+]

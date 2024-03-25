@@ -1,0 +1,36 @@
+{% extends "content/base_template.html" %}
+
+{% block content %}
+
+{% if track %}
+
+<h2>Editing {{track.title}}</h2>
+
+{% else %}
+
+<h2>New Track</h2>
+
+{% endif %}
+
+<form action="" method="POST">
+
+    {% csrf_token %}
+    {{form}}
+
+    <input type="submit" class="btn btn-primary" value="Save" />
+    
+</form>
+
+{% if track %}
+
+<form action="{% url 'track_delete' track_uuid=track.uuid %}" method="POST">
+    {% csrf_token %}
+
+    <input type="submit" class="btn btn-danger" value="Delete" />
+
+</form>
+{% endif %}
+
+
+
+{% endblock %}

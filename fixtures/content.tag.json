@@ -1,0 +1,9 @@
+[
+{
+    "model": "content.tag",
+    "pk": 1,
+    "fields": {
+        "name": "test-123"
+    }
+}
+]

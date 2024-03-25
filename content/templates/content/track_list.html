@@ -1,0 +1,21 @@
+{% extends "content/base_template.html" %}
+
+{% block content %}
+
+<div class="text-end">
+    <a href="{% url 'track_edit' %}" class="btn btn-primary">New</a>
+</div>
+
+<table class="table table-striped">
+    {% for track in tracks %}
+    <tr>
+        <td>{{track.title}}</td>
+        <td>{{track.album.title}}</td>
+        <td><a href="{% url 'track_detail' track_uuid=track.uuid %}" class="btn btn-primary">Details</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
+
+
